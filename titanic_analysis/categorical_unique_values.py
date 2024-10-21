@@ -1,12 +1,8 @@
 def display_unique_values(df, categorical_features):
-    """
-    Displays unique values for each categorical feature in the DataFrame.
+    unique_values = {}
+    for feature in categorical_features:
+        if feature in df:
+            unique_values[feature] = df[feature].unique()  # List of unique values for each categorical feature
     
-    Args:
-        df (pd.DataFrame): The Titanic dataset as a DataFrame.
-        categorical_features (list): List of categorical feature names.
-    
-    Returns:
-        dict: A dictionary where keys are feature names and values are the unique values.
-    """
+    return unique_values
     pass  # Implement the logic here
