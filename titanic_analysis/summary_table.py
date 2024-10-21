@@ -1,3 +1,5 @@
+import pandas as pd
+
 def create_summary_table(df):
     summary_data = {
         'Feature Name': df.columns,
@@ -6,5 +8,5 @@ def create_summary_table(df):
         'Has Missing Values?': df.isnull().any().values
     }
     
-    summary_df = df.DataFrame(summary_data)
+    summary_df = pd.DataFrame(summary_data)
     return summary_df
