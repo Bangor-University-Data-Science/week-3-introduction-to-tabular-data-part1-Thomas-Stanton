@@ -6,5 +6,5 @@ def create_summary_table(df):
         'Has Missing Values?': df.isnull().any().values
     }
     
-    summary_df = pd.DataFrame(summary_data)
+    summary_df = df.DataFrame(summary_data)
     return summary_df
